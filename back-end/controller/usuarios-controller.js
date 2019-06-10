@@ -13,7 +13,7 @@ exports.post = (req, res, next) => {
     res.send('ok');
 }
 
-exports.patch = (req, res, next) => {
+exports.put = (req, res, next) => {
     var usuario = new Usuario();
     Usuario.findByIdAndUpdate(req.params.id, req.body, (err, todo) => {
         if (err) return res.status(500).send(err);
